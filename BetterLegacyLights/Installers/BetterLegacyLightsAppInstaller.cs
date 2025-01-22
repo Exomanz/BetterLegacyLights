@@ -1,4 +1,5 @@
-﻿using Zenject;
+﻿using BetterLegacyLights.AffinityPatches;
+using Zenject;
 
 namespace BetterLegacyLights.Installers
 {
@@ -13,6 +14,8 @@ namespace BetterLegacyLights.Installers
         public override void InstallBindings()
         {
             Container.BindInstance(_config).AsCached();
+            Container.BindInterfacesAndSelfTo<DefaultEnvironmentEventsFactory_InsertDefaultEventsPatch>().AsSingle();
+            Container.BindInterfacesAndSelfTo<BeatmapDataLoader_LoadBeatmapDataAsyncPatch>().AsSingle();
         }
     }
 }

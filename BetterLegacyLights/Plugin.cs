@@ -14,8 +14,10 @@ namespace BetterLegacyLights
         public Plugin(IPALogger logger, IPAConfig config, Zenjector zenjector)
         {
             PluginConfig _config = config.Generated<PluginConfig>();
+
             zenjector.UseLogger(logger);
-            zenjector.Install<BetterLegacyLightsAppInstaller>(Location.App);
+            zenjector.Install<BetterLegacyLightsAppInstaller>(Location.App, _config);
+            zenjector.Install<BetterLegacyLightsMenuInstaller>(Location.Menu);
         }
     }
 }
