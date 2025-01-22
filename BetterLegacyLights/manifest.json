@@ -1,0 +1,14 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
+  "id": "BetterLegacyLights",
+  "name": "BetterLegacyLights",
+  "author": "Exomanz",
+  "version": "1.0.0",
+  "description": "The spiritual successor to BetterStaticLights. Only supported on V1 and V2 environments.",
+  "gameVersion": "1.40.0",
+  "dependsOn": {
+    "BSIPA": "^4.3.5",
+    "SiraUtil": "^3.1.14",
+    "BeatSaberMarkupLanguage": "^1.12.5"
+  }
+}
