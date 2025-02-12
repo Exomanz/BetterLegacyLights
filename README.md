@@ -8,7 +8,7 @@ This mod ONLY WORKS on V1/V2 environments, or those that existed prior to OST V'
 ## Dependencies
 - BSIPA v4.3.5+
 - SiraUtil v3.1.14+
-- BeatSaberMarkupLanguage v1.12.5+
+- BeatSaberMarkupLanguage v1.12.4+
 
 ## Features
 - Total control of which sets of lights are active in classic environments.
