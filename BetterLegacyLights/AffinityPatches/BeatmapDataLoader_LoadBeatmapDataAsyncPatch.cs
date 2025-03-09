@@ -2,12 +2,13 @@
 
 namespace BetterLegacyLights.AffinityPatches
 {
-    /// <summary>
-    /// Force-disables the 'enableBeatmapDataCaching' flag in the LoadBeatmapDataAsync method.
-    /// <br></br>This value is hardcoded to always be 'true' in the game.
-    /// </summary>
     internal class BeatmapDataLoader_LoadBeatmapDataAsyncPatch : IAffinity
     {
+        /// <summary>
+        /// Force-disables the <paramref name="enableBeatmapDataCaching"/> flag in the <see cref="BeatmapDataLoader.LoadBeatmapDataAsync(IBeatmapLevelData, BeatmapKey, float, bool, IEnvironmentInfo?, IEnvironmentInfo?, BeatmapLevelDataVersion, GameplayModifiers?, PlayerSpecificSettings?, bool)"/> method.
+        /// <br/>Having this flag set to true in the game prevents this mod from updating its lights if the user plays the same level twice.
+        /// <br/>This value is hardcoded to always be <see langword="true"/> in the game.
+        /// </summary>a
         [AffinityPrefix]
         [AffinityPatch(
             typeof(BeatmapDataLoader),

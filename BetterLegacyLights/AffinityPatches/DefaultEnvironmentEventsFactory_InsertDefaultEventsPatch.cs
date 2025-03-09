@@ -3,17 +3,14 @@ using System.Collections.Generic;
 
 namespace BetterLegacyLights.AffinityPatches
 {
-    /// <summary>
-    /// Slightly modifies the DefaultEnvironmentEventsFactory to allow injection of custom light events at map start.
-    /// </summary>
     internal class DefaultEnvironmentEventsFactory_InsertDefaultEventsPatch : IAffinity
     {
         private readonly PluginConfig _config;
-        private readonly List<LightSet> lightSetList;
+        private readonly List<LightSet> _lightSetList;
 
         internal DefaultEnvironmentEventsFactory_InsertDefaultEventsPatch(PluginConfig config)
         {
-            lightSetList = new List<LightSet>()
+            _lightSetList = new List<LightSet>()
             {
                 config.LightSet_BackTop,
                 config.LightSet_RingLights,
@@ -25,18 +22,21 @@ namespace BetterLegacyLights.AffinityPatches
             _config = config;
         }
 
+        /// <summary>
+        /// Slightly modifies the DefaultEnvironmentEventsFactory to allow injection of custom light events at map start.
+        /// </summary>
         [AffinityPrefix]
         [AffinityPatch(
             typeof(DefaultEnvironmentEventsFactory),
             nameof(DefaultEnvironmentEventsFactory.InsertDefaultEvents))]
-        protected bool PatchFactory(ref BeatmapData beatmapData)
+        public bool PatchFactory(ref BeatmapData beatmapData)
         {
-            foreach (LightSet lightSet in lightSetList)
+            foreach (LightSet lightSet in _lightSetList)
             {
                 if (lightSet.Enabled)
                 {
                     beatmapData.InsertBeatmapEventData(new BasicBeatmapEventData(
-                        0f, lightSet.beatmapEventType, lightSet.ColorMode, 1f));
+                        0f, lightSet.BeatmapEventType, lightSet.ColorMode, lightSet.Brightness));
                 }
             }
 

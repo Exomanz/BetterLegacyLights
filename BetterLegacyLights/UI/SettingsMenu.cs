@@ -93,5 +93,42 @@ namespace BetterLegacyLights.UI
             set => pluginConfig.LightSet_BottomBackSide.ColorMode = value ? 1 : 5;
         }
         #endregion
+
+        #region Lightset Brightness Props
+        [UIValue("ls-backtop-brightness")]
+        public float BackTopBrightness
+        {
+            get => pluginConfig.LightSet_BackTop.Brightness;
+            set => pluginConfig.LightSet_BackTop.Brightness = value;
+        }
+
+        [UIValue("ls-ringlights-brightness")]
+        public float RingLightsBrightness
+        {
+            get => pluginConfig.LightSet_RingLights.Brightness;
+            set => pluginConfig.LightSet_RingLights.Brightness = value;
+        }
+
+        [UIValue("ls-leftlasers-brightness")]
+        public float LeftLasersBrightness
+        {
+            get => pluginConfig.LightSet_LeftLasers.Brightness;
+            set => pluginConfig.LightSet_LeftLasers.Brightness = value;
+        }
+
+        [UIValue("ls-rightlasers-brightness")]
+        public float RightLasersBrightness
+        {
+            get => pluginConfig.LightSet_RightLasers.Brightness;
+            set => pluginConfig.LightSet_RightLasers.Brightness = value;
+        }
+
+        [UIValue("ls-bottombackside-brightness")]
+        public float BottomBackSideBrightness
+        {
+            get => pluginConfig.LightSet_BottomBackSide.Brightness;
+            set => pluginConfig.LightSet_BottomBackSide.Brightness = value;
+        }
+        #endregion
     }
 }

@@ -1,32 +1,56 @@
-﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xsi:noNamespaceSchemaLocation='https://monkeymanboy.github.io/BSML-Docs/BSMLSchema.xsd'>
-	<vertical child-control-height='false' pref-width='80' pad-right='10'>
-		<horizontal pad-left='14' spacing='0'>
-			<text text='Enabled' italics='true' font-color='lime' align='Left'/>
-			<text text='Use Secondary Color' italics='true' font-color='orange' align='Right'/>
+	<settings-container>
+		<horizontal pref-height='5' pref-width='100' bg='panel-top' pad='3'>
+			<text text='LightSet Name' underlined='true' italics='true' align='Left'/>
+			<text text='Enabled' underlined='true' italics='true' color='lime' align='Center'/>
+			<text text='Switch Color' underlined='true' italics='true' raycast='true' hover-hint='When enabled, uses the left saber color instead of the right saber color.' align='Right' color='orange'/>
 		</horizontal>
-		<horizontal spacing='-3' pad-bottom='12'>
-			<vertical pref-width="30">
-				<checkbox text="" value="ls-backtop-enabled" apply-on-change="true"/>
-				<checkbox text="" value="ls-ringlights-enabled" apply-on-change="true"/>
-				<checkbox text="" value="ls-leftlasers-enabled" apply-on-change="true"/>
-				<checkbox text="" value="ls-rightlasers-enabled" apply-on-change="true"/>
-				<checkbox text="" value="ls-bottombackside-enabled" apply-on-change="true"/>
-			</vertical>
-			<vertical pad-left="10">
-				<text text="Back Top" align="Center" italics="true"/>
-				<text text="Ring Lights" align="Center" italics="true"/>
-				<text text="Left Lasers" align="Center" italics="true"/>
-				<text text="Right Lasers" align="Center" italics="true"/>
-				<text text="Bottom Back Side" align="Center" italics="true"/>
-			</vertical>
-			<vertical pref-width="30">
-				<checkbox text="" value="ls-backtop-color" apply-on-change="true"/>
-				<checkbox text="" value="ls-ringlights-color" apply-on-change="true"/>
-				<checkbox text="" value="ls-leftlasers-color" apply-on-change="true"/>
-				<checkbox text="" value="ls-rightlasers-color" apply-on-change="true"/>
-				<checkbox text="" value="ls-bottombackside-color" apply-on-change="true"/>
-			</vertical>
-		</horizontal>
-	</vertical>
+		<vertical pref-width='90' vertical-fit='PreferredSize'>
+			<horizontal horizontal-fit='Unconstrained'>
+				<text text='Back Top' align='Left'/>
+				<checkbox text='' value='ls-backtop-enabled' apply-on-change='true' pref-width='0'/>
+				<checkbox text='' value='ls-backtop-color' apply-on-change='true' pref-width='0'/>
+			</horizontal>
+			<horizontal horizontal-fit='Unconstrained' pref-width='3'>
+				<slider-setting text='&#009;Brightness' align='Left' value='ls-backtop-brightness' apply-on-change='true' increment='0.1' min='0.1' max='1'/>
+			</horizontal>
+
+			<horizontal horizontal-fit='Unconstrained'>
+				<text text='Ring Lights' align='Left' size-delta-x='40'/>
+				<checkbox text='' value='ls-ringlights-enabled' apply-on-change='true' pref-width='0'/>
+				<checkbox text='' value='ls-ringlights-color' apply-on-change='true' pref-width='0'/>
+			</horizontal>
+			<horizontal horizontal-fit='Unconstrained' pref-width='3'>
+				<slider-setting text='&#009;Brightness' align='Left' value='ls-ringlights-brightness' apply-on-change='true' increment='0.1' min='0.1' max='1'/>
+			</horizontal>
+
+			<horizontal horizontal-fit='Unconstrained'>
+				<text text='Left Lasers' align='Left' size-delta-x='40'/>
+				<checkbox text='' value='ls-leftlasers-enabled' apply-on-change='true' pref-width='0'/>
+				<checkbox text='' value='ls-leftlasers-color' apply-on-change='true' pref-width='0'/>
+			</horizontal>
+			<horizontal horizontal-fit='Unconstrained' pref-width='3'>
+				<slider-setting text='&#009;Brightness' align='Left' value='ls-leftlasers-brightness' apply-on-change='true' increment='0.1' min='0.1' max='1'/>
+			</horizontal>
+
+			<horizontal horizontal-fit='Unconstrained'>
+				<text text='Right Lasers' align='Left' size-delta-x='40'/>
+				<checkbox text='' value='ls-rightlasers-enabled' apply-on-change='true' pref-width='0'/>
+				<checkbox text='' value='ls-rightlasers-color' apply-on-change='true' pref-width='0'/>
+			</horizontal>
+			<horizontal horizontal-fit='Unconstrained' pref-width='3'>
+				<slider-setting text='&#009;Brightness' align='Left' value='ls-rightlasers-brightness' apply-on-change='true' increment='0.1' min='0.1' max='1'/>
+			</horizontal>
+
+			<horizontal horizontal-fit='Unconstrained'>
+				<text text='Bottom Back Side' align='Left'/>
+				<checkbox text='' value='ls-bottombackside-enabled' apply-on-change='true' pref-width='0'/>
+				<checkbox text='' value='ls-bottombackside-color' apply-on-change='true' pref-width='0'/>
+			</horizontal>
+			<horizontal horizontal-fit='Unconstrained' pref-width='3'>
+				<slider-setting text='&#009;Brightness' align='Left' value='ls-bottombackside-brightness' apply-on-change='true' increment='0.1' min='0.1' max='1'/>
+			</horizontal>
+		</vertical>
+	</settings-container>
 </bg>

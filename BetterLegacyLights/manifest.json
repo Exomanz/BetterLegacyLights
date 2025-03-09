@@ -3,7 +3,7 @@
   "id": "BetterLegacyLights",
   "name": "BetterLegacyLights",
   "author": "Exomanz",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The spiritual successor to BetterStaticLights. Only supported on V1 and V2 environments.",
   "gameVersion": "1.39.1",
   "dependsOn": {
