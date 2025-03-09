@@ -3,7 +3,36 @@
 
 # BetterLegacyLights
 A Beat Saber mod that brings back the original function of BetterStaticLights.   
-This mod ONLY WORKS on V1/V2 environments, or those that existed prior to OST V's "Interscope" environment.
+This mod ONLY WORKS on V1/V2 environments, or those that existed prior to OST V's "Weave" environment. 
+
+## Supported Environments
+<details>
+  <summary>V1 and V2 Environments - Click to Expand</summary>
+  <ul>
+    <li>The First</li>
+    <li>Origins</li>
+    <li>Triangle</li>
+    <li>Nice</li>
+    <li>Big Mirror</li>
+    <li>Dragons - Imagine Dragons DLC</li>
+    <li>KDA</li>
+    <li>Monstercat - Monstercat Mixtape 1 DLC</li>
+    <li>Crab Rave</li>
+    <li>Panic - P!ATD DLC</li>
+    <li>Rocket - Rocket League DLC</li>
+    <li>Green Day/Grenade - Green Day DLC</li>
+    <li>Timbaland - Timbaland DLC</li>
+    <li>FitBeat</li>
+    <li>Linkin Park - Linkin Park DLC</li>
+    <li>BTS - BTS DLC</li>
+    <li>Kaleidoscope</li>
+    <li>Interscope</li>
+    <li>Skrillex - Skrillex DLC</li>
+    <li>Billie - Billie Eilish DLC</li>
+    <li>Spooky</li>
+    <li>Gaga - Lady Gaga DLC</li>
+  </ul>
+</details>
 
 ## Dependencies
 - BSIPA v4.3.5+
