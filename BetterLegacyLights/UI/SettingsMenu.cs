@@ -12,12 +12,12 @@ namespace BetterLegacyLights.UI
 
         public void Initialize()
         {
-            GameplaySetup.Instance.AddTab("BetterLegacyLights", "BetterLegacyLights.UI.settingsMenu.bsml", this);
+            GameplaySetup.Instance.AddTab("Better Legacy Lights", "BetterLegacyLights.UI.settingsMenu.bsml", this);
         }
 
         public void Dispose()
         {
-            GameplaySetup.Instance.RemoveTab("BetterLegacyLights");
+            GameplaySetup.Instance.RemoveTab("Better Legacy Lights");
         }
 
         #region LightSet Enabled Props
