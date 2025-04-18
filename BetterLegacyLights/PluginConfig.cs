@@ -1,4 +1,5 @@
 ﻿using IPA.Config.Stores;
+using IPA.Config.Stores.Attributes;
 using System.Runtime.CompilerServices;
 
 [assembly:InternalsVisibleTo(GeneratedStore.AssemblyVisibilityTarget)]
@@ -6,6 +7,8 @@ namespace BetterLegacyLights
 {
     internal class PluginConfig
     {
+        [Ignore] public bool DidAnySettingChange { get; set; } = false;
+
         public virtual LightSet LightSet_BackTop { get; set; } = new LightSet(
             true, 
             "BackTop", 
@@ -40,5 +43,11 @@ namespace BetterLegacyLights
             1,
             1,
             BasicBeatmapEventType.Event4);
+
+        public virtual void Changed()
+        {
+            if (!DidAnySettingChange)
+                DidAnySettingChange = true;
+        }
     }
 }

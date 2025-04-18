@@ -40,6 +40,7 @@ namespace BetterLegacyLights.AffinityPatches
                 }
             }
 
+            _config.DidAnySettingChange = false;
             return false;
         }
     }
