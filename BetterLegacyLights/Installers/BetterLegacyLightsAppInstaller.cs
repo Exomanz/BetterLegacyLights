@@ -15,7 +15,7 @@ namespace BetterLegacyLights.Installers
         {
             Container.BindInstance(_config).AsCached();
             Container.BindInterfacesAndSelfTo<DefaultEnvironmentEventsFactory_InsertDefaultEventsPatch>().AsSingle();
-            Container.BindInterfacesAndSelfTo<BeatmapDataLoader_LoadBeatmapDataAsyncPatch>().AsSingle();
+            Container.BindInterfacesAndSelfTo<LastUsedBeatmapDataCache_AreSameBeatmapDataCachedPatch>().AsSingle();
         }
     }
 }
